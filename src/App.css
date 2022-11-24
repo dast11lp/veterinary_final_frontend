@@ -36,3 +36,267 @@
     transform: rotate(360deg);
   }
 }
+
+.layout{
+  display: grid;
+  grid-template-areas: "header header header"
+             "content content content"
+             "footer footer footer";
+  height: 100vh;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: header;
+  max-height: 80px;
+  min-height: 80px;
+  background-color: orange;
+  
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+}
+
+.header .log {
+  padding-right: 40px;
+}
+
+.header nav ul{
+  list-style: none;
+  display: flex;
+}
+
+.header nav ul{
+  list-style: none;
+  display: flex;
+}
+
+.account{
+  padding-left: 90%;
+}
+
+.log-item {
+  padding: 20px;
+}
+
+.header a{
+  text-decoration: none;
+  color: white;
+}
+
+.content {
+  grid-area: content;
+  min-height: 500px;
+  padding: 30px 30px;
+
+}
+
+.my-card{
+  flex-grow: 1;
+  max-height: 150px;
+}
+
+/* .content .form{
+  margin: auto;
+} */
+/* .content .form form{
+  display: flex;
+  flex-direction: column;
+} */
+
+/* .content form input[type="text"],
+.content form input[type="password"]{
+  outline: none;
+  border: 1px solid lightblue;
+}
+
+
+.content form input[type="text"]:focus,
+.content form input[type="password"]:focus{
+  outline: none;
+  border: 1px solid orange;
+} */
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  padding: 30px;
+  background-color: #61dafb;
+  color: white;
+}
+
+/* Register */
+
+
+form a,[type="submit"] {transition: all .25s ease-in;}
+.signup__container {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  transform: translateY(-50%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: remy(800px);
+  height: remy(480px);
+  border-radius: remy(3px);
+  box-shadow: 0px remy(3px) remy(7px) rgba(0,0,0,.25);
+}
+
+.container__child {
+  width: 50%;
+  height: 100%;
+  color: #fff;
+}
+.signup__thumbnail {
+  position: relative;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: url(http://ultraimg.com/images/spectre-login.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+.thumbnail__logo,
+.thumbnail__content,
+.thumbnail__links {
+  position: relative;
+  z-index: 2;  
+}
+.thumbnail__logo {align-self: flex-start;}
+.logo__shape {fill: #fff;}
+.logo__text {
+  display: inline-block;
+  font-size: .8rem;
+  font-weight: 700;
+  vertical-align: bottom;
+}
+.thumbnail__content {align-self: center;}
+form h1,
+form h2 {
+  font-weight: 300;
+  color: rgba(255,255,255,1);
+}
+.heading--primary {font-size: 1.999rem;}
+.heading--secondary {font-size: 1.414rem;}
+.thumbnail__links {
+  align-self: flex-end;
+  width: 100%;
+}
+.thumbnail__links a {
+  font-size: 1rem;
+  color: #fff;
+}
+.signup__form {
+  padding: 2.5rem;
+  background: #fafafa;
+}
+label {
+  font-size: .85rem;
+  text-transform: uppercase;
+  color: #ccc;
+}
+.form-control {
+  background-color: transparent;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+}
+[type="text"] {color: #111;}
+[type="password"] {color: #111;}
+.btn--form {
+  padding: .5rem 2.5rem;
+  font-size: .95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  background: #111;
+  border-radius: remy(35px);
+
+}
+.signup__link {
+  font-size: .8rem;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #999;
+}
+
+
+/* Modal */
+
+.show-modal {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.75rem 3.5rem;
+  margin: 5rem 2rem;
+  border: none;
+  background-color: #fff;
+  color: #444;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+/* -------------------------- */
+/* CLASSES TO MAKE MODAL WORK */
+.hidden {
+  display: none;
+}
+
+.my-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
